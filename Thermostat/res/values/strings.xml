@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ThermostatActivity!</string>
+    <string name="app_name">Thermostat</string>
+    <string name="main_title">Current temperature:</string>
+	<string name="main_mode">Mode:</string>
+	<string name="main_time">Time</string>
+	<string name="main_targettemperaturelabel">Target temperature:</string>
+	<string name="main_switch">Night mode</string>
+	<string name="main_temp">20.5</string>
+	<string name="main_targettemp">20.5</string>
+	<string name="main_day">Monday</string>
+	
+	<string name="vacation_title">Vacation</string>
+	<string name="vacation_templabel">Set temperature:</string>
+	<string name="vacation_info">Turn vacation mode on</string>
+	<string name="vacation_temp">16.5</string>
+	
+	<string name="temp_title">Day and night temperatures</string>
+	<string name="temp_daytitle">Set day temperature:</string>
+	<string name="temp_nighttitle">Set night temperature:</string>
+	
+	<string name="button_save">Save</string>
+	<string name="button_back">Back</string>
+	<string name="button_program">Current Program</string>
+	
+	<string name="modify_days">Select the target mode:</string>
+	<string name="add_To">Add setting</string>
+	<string name="add_new">Add new setting</string>
+	<string name="button_delete">Delete</string>
+	<string name="button_apply">Apply</string>
+	
+	<string name="CopyButtonWeekSetting">Copy settings</string>
+	<string name="LoadButtonWeekSetting">Load</string>
+	<string name="setDayWeekSetting">Day program</string>
+	<string name="TitleWeekSetting">Add/Change title</string>
+	<string name="timerWeekDays">Select the time:</string>
+	<string name="modeWeekDays">Mode select</string>
+	<string name="main_spinner">Insert values</string>
+	<string name="add_daymode">Day mode</string>
+	<string name="add_nightmode">Night mode</string>
+	<string name="change_day">Select an other day</string>
+
+	<string name="listView">Select an item to edit or delete it</string>
+	
+</resources>

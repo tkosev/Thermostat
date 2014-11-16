@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/tempSettings" android:title="Day and night temperatures"></item>
+    <item android:id="@+id/weekProgramm" android:title="Week-program" android:alphabeticShortcut="x"></item>
+    <item android:id="@+id/vacationSettings" android:title="Vacation"></item>
+    <item android:id="@+id/exit" android:title="Exit"></item>    
+</menu>

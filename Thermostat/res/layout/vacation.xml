@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/vacation_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15pt" />
+
+    <TextView
+        android:id="@+id/lblTempState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/vacation_templabel"
+        android:textSize="9pt" />
+
+    <SeekBar
+        android:id="@+id/prgTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTempState"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:max="250" />
+
+    <ImageButton
+        android:id="@+id/imgPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/prgTemperature"
+        android:layout_below="@+id/prgTemperature"
+        android:layout_marginTop="8pt"
+        android:background="@drawable/round"
+        android:onClick="incTemp"
+        android:src="@drawable/plussign" />
+
+    <ImageButton
+        android:id="@+id/imgMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prgTemperature"
+        android:layout_below="@+id/prgTemperature"
+        android:layout_marginTop="8pt"
+        android:background="@drawable/round"
+        android:onClick="decTemp"
+        android:src="@drawable/minsign" />
+
+    <TextView
+        android:id="@+id/lblTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgMin"
+        android:layout_centerHorizontal="true"
+        android:text="@string/vacation_temp"
+        android:textColor="@color/white"
+        android:textSize="9pt" />
+
+    <TextView
+        android:id="@+id/lblModeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgPlus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/vacation_info"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblModeSwitch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:checked="false"
+        android:text="ToggleButton" android:textOff="OFF" android:textOn="ON" android:onClick="toggleSwitch"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveVacation"
+        android:text="@string/button_save" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBack"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/holiday" />
+
+</RelativeLayout>

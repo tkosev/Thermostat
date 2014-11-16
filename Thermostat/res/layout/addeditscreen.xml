@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/TitleWeekSetting"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="10pt" />
+
+
+    <TextView
+        android:id="@+id/lblTempState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timePicker1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/modify_days"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textSize="9pt" />
+
+    <TextView
+        android:id="@+id/lblAddDayModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnDeleteSetting"
+        android:layout_alignLeft="@+id/imgSunMode"
+        android:layout_marginBottom="5pt"
+        android:layout_marginLeft="12pt"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnApplySetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/button_apply" android:onClick="applyTheSetting"/>
+
+
+    <Button
+        android:id="@+id/btnDeleteSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/button_delete" android:onClick="deleteTheSetting"/>
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12pt" />
+
+    <TextView
+        android:id="@+id/lblClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3pt"
+        android:text="@string/timerWeekDays"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textSize="6pt" />
+
+    <ImageView
+        android:id="@+id/imgSunMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioModeSelect"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lblTempState"
+        android:layout_marginRight="10pt"
+        android:src="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/imgMoonMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioModeSelect"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTempState"
+        android:layout_marginLeft="10pt"
+        android:src="@drawable/moon" />
+
+    <Button
+        android:id="@+id/btnAddSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_To" android:onClick="addTheSetting"/>
+	
+    <RadioGroup
+        android:id="@+id/radioModeSelect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:layout_above="@+id/lblAddDayModeText" android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radMoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="20pt" android:text="Night"/>
+
+        <RadioButton
+            android:id="@+id/radSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="30pt" android:text="Day" android:checked="true"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/lblAddNightModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnApplySetting"
+        android:layout_alignRight="@id/imgMoonMode"
+        android:layout_marginBottom="5pt"
+        android:layout_marginRight="11pt"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

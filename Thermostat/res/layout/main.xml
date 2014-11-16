@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <SeekBar
+            android:id="@+id/prgTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="25pt"
+            android:layout_marginLeft="10pt"
+            android:layout_marginRight="10pt"
+            android:max="250" />
+
+        <TextView
+            android:id="@+id/lblCurrentTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="@string/main_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/lblTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblCurrentTemp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/main_temp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20pt" />
+
+        <ImageView
+            android:id="@+id/imgBurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/lblTemperature"
+            android:layout_alignRight="@+id/lblCurrentTemp"
+            android:layout_alignTop="@+id/lblTemperature"
+            android:layout_margin="3pt"
+            android:layout_toRightOf="@+id/lblTemperature"
+            android:src="@drawable/fire" />
+
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/prgTemperature"
+            android:layout_below="@+id/lblTemperature"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/moon" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/prgTemperature"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Target temperature:"
+            android:textSize="9pt" />
+
+        <ImageButton
+            android:id="@+id/imgPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/prgTemperature"
+            android:layout_below="@+id/textView1"
+            android:background="@drawable/round"
+            android:onClick="incTemp"
+            android:src="@drawable/plussign" />
+
+        <ImageButton
+            android:id="@+id/imgMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/prgTemperature"
+            android:layout_alignTop="@+id/imgPlus"
+            android:background="@drawable/round"
+            android:onClick="decTemp"
+            android:src="@drawable/minsign" />
+
+        <TextView
+            android:id="@+id/lblTargetTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgPlus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/main_targettemp"
+            android:textColor="@color/white"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/lblModeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgStatus"
+            android:layout_marginBottom="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/lblTemperature"
+            android:text="@string/main_mode"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/lblNextSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPlus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="@string/main_switch"
+            android:textSize="6pt" />
+
+        <TextView
+            android:id="@+id/lblCurrentDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblNextSwitch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5pt"
+            android:text="@string/main_day"
+            android:textColor="@color/white"
+            android:textSize="9pt" />
+
+        <Button
+            android:id="@+id/btnProgram"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/button_program" android:onClick="activateProgram"/>
+
+        <TextView
+            android:id="@+id/lblCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgStatus"
+            android:layout_alignRight="@+id/prgTemperature"
+            android:text="TextView"
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/lblClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lblCurrentTime"
+            android:layout_alignRight="@+id/lblCurrentTime"
+            android:text="@string/main_time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>

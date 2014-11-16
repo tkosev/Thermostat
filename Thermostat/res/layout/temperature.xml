@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/temp_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="10pt" />
+
+    <SeekBar
+        android:id="@+id/prgDayTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="74dp"
+        android:max="250" />
+
+    <TextView
+        android:id="@+id/lblSetDayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/prgDayTemp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/temp_daytitle"
+        android:textSize="9pt" android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/lblSun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblSetDayTemp"
+        android:layout_below="@+id/lblTitle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sun" />
+
+    <ImageButton
+        android:id="@+id/btnDayPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/prgDayTemp"
+        android:layout_below="@+id/prgDayTemp"
+        android:layout_marginTop="6pt"
+        android:background="@drawable/round"
+        android:onClick="incDayTemp"
+        android:src="@drawable/plussign" />
+
+    <ImageButton
+        android:id="@+id/btnDayMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prgDayTemp"
+        android:layout_below="@+id/prgDayTemp"
+        android:layout_marginTop="6pt"
+        android:background="@drawable/round"
+        android:onClick="decDayTemp"
+        android:src="@drawable/minsign" />
+
+    <TextView
+        android:id="@+id/lblDayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vacation_temp"
+        android:textColor="@color/white"
+        android:textSize="9pt" android:layout_alignTop="@+id/btnDayMin" android:layout_centerInParent="true"/>
+
+    <SeekBar
+        android:id="@+id/prgNightTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/prgDayTemp"
+        android:max="250" android:layout_marginLeft="10pt" android:layout_marginRight="10pt" android:layout_marginTop="150dp"/>
+
+    <ImageButton
+        android:id="@+id/btnNightMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prgNightTemp"
+        android:layout_below="@+id/prgNightTemp"
+        android:background="@drawable/round"
+        android:onClick="decNightTemp"
+        android:src="@drawable/minsign" android:layout_marginTop="6pt"/>
+
+    <ImageButton
+        android:id="@+id/btnNightPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/prgNightTemp"
+        android:layout_below="@+id/prgNightTemp"
+        android:background="@drawable/round"
+        android:onClick="incNightTemp"
+        android:src="@drawable/plussign" android:layout_marginTop="6pt"/>
+
+    <TextView
+        android:id="@+id/lblSetNightTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/temp_nighttitle"
+        android:textSize="9pt" android:layout_above="@id/prgNightTemp" android:layout_marginBottom="-150dp"/>
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblSetNightTemp"
+        android:layout_alignLeft="@+id/lblSun"
+        android:layout_below="@+id/btnDayPlus"
+        android:src="@drawable/moon" />
+
+    <TextView
+        android:id="@+id/lblNightTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnNightMin"
+        android:text="@string/vacation_temp"
+        android:textColor="@color/white"
+        android:textSize="9pt" android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btnSaveTemps"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveTemperatures"
+        android:text="@string/button_save" />
+
+</RelativeLayout>
